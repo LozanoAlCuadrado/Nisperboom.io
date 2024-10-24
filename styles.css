@@ -1,0 +1,327 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff9e5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Cabecera */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9a825;
+    height: 63px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 0 30px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    padding: 20px 15px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background: #ffd54f;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffe082;
+    margin-top: 63px;
+    position: relative;
+}
+
+/* Logo circular más grande */
+.logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 10px solid #ffca28;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Rayos más grandes alrededor del logo */
+.rayos {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.rayo {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #ff6f00;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Posiciones de los rayos */
+.rayo:nth-child(1) {
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rayo:nth-child(2) {
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+}
+
+.rayo:nth-child(3) {
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+}
+
+/* Texto dentro del header */
+.titulo {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ff6f00;
+}
+
+p {
+    font-size: 22px;
+    padding: 0 20px;
+    color: #5d4037;
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Botones */
+.btn-home {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    background: #ff6f00;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ffca28;
+    color: #5d4037;
+}
+
+/* Sección de productos */
+.sau {
+    padding: 50px 20px;
+    background-color: #c0ca33;
+    text-align: center;
+}
+
+.sau p {
+    text-align: center;
+    font-size: 18px;
+    color: #5d4037;
+    margin: 0 auto;
+}
+
+.sau .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.sau .box {
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    background-color: #ffeb3b;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sau .box h3 {
+    text-align: center;
+    color: #f57f17;
+    margin-bottom: 10px;
+}
+
+.sau .box p {
+    text-align: center;
+    color: #5d4037;
+    font-size: 16px;
+}
+
+/* Sección de Nosotros */
+.content-nosotros {
+    padding: 50px 20px;
+    background-color: #8bc34a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content-nosotros p {
+    font-size: 18px;
+    color: #5d4037;
+    margin: 0 auto;
+}
+
+/* Sección de Precios con efecto Parallax */
+.content-price {
+    background: url(img/mas_nisperos.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content-price .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-price p {
+    font-size: 18px;
+    color: #5d4037;
+    margin: 0 auto;
+}
+
+/* Sección de Contacto */
+.content-contact {
+    padding: 50px 20px;
+    background-color: #81c784;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Asegura que ocupe toda la pantalla */
+}
+
+.content-contact .titulo {
+    font-size: 35px;
+    color: #ff6f00;
+    margin-bottom: 20px;
+}
+
+.content-contact p {
+    font-size: 24px;
+    color: #4e342e;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 10px 0; /* Ajuste del margen para eliminar espacios innecesarios */
+}
+
+/* Estilo para el ícono de Instagram */
+.instagram-icon {
+    font-size: 50px;
+    color: #E1306C;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.instagram-icon:hover {
+    color: #ff6f00;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #f9a825;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;      /* Centrar verticalmente */
+    height: 100px;            /* Asegurar altura fija para el footer */
+}
+
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .header {
+        height: 50vh;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    .navbar a {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .content-price {
+        background-attachment: scroll;
+    }
+}
+
+
+
+
+
+
+
