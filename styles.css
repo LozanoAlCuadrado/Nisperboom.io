@@ -288,36 +288,51 @@ footer {
 }
 
 
-
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .header {
-        height: 50vh;
+        height: auto; /* Ajuste automático en dispositivos móviles */
     }
 
     .titulo {
-        font-size: 40px;
+        font-size: 2.5rem; /* Tamaño del título más pequeño en pantallas pequeñas */
     }
 
     .navbar a {
-        padding: 15px;
-        font-size: 18px;
+        padding: 10px;
+        font-size: 1rem; /* Ajuste del tamaño de los enlaces de navegación */
     }
 
     .box-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Las cajas se apilan en lugar de estar en fila */
     }
 
     .box {
         width: 100%;
-        max-width: 350px;
+        max-width: 350px; /* Ajuste del ancho de las cajas en pantallas pequeñas */
     }
 
     .content-price {
-        background-attachment: scroll;
+        background-attachment: scroll; /* Desactiva el efecto parallax en dispositivos móviles */
+    }
+
+    .logo-img {
+        width: 100%;
+        max-width: 200px; /* Escala el logo en pantallas más pequeñas */
+        height: auto;
+    }
+
+    .rayos {
+        width: 100%;
+        max-width: 250px; /* Ajusta el tamaño de los rayos en pantallas pequeñas */
+        height: auto;
+    }
+
+    p {
+        font-size: 1rem; /* Tamaño del texto más pequeño para pantallas pequeñas */
     }
 }
+
 
 
 
